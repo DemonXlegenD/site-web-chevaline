@@ -1,18 +1,30 @@
+:root{
+    --navy-blue: #C3353B;
+    --blue-grotto: #05445E;
+    --blue-green: #048CFC;
+    --baby-blue: #F3F2F2;
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #BABABA;
+    background-color: var(--baby-blue);
 }
 
 /*HEADER*/
 
 .navbar {
-    background-color: #CBAFAF;
+    background-color: black;
     padding: 0 75px;
     min-height: 50px;
     margin-bottom: 150px;
+    color: white;
+}
+
+.navbar-brand, .nav-link{
+    color: white;
 }
 
 .navbar-collapse{
@@ -43,7 +55,7 @@ main {
 .authenticity-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     gap: 20px;
@@ -57,25 +69,32 @@ main {
 
 .authenticity-container-image{
     border-radius: 5px;
-    background-color: #604B4B;
+    background-color: var(--blue-grotto);
     display: flex;
     align-items: center;
     width: 750px;
     height: 500px;
 }
 
+.card-header{
+    background-color: #C3353B;
+    color: white;
+}
 .first-image {
     width: 100%;
     border-radius: 5px;
 }
 
+
+
 /*Localization*/
 
 .localization-container {
-    background-color: #D9D9D9;
+    color: white;
+    background-color: var(--blue-grotto);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     gap: 20px;
@@ -88,21 +107,24 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 }
 
 .localization-image {
-    background-color: #604B4B;
+    background-color: var(--blue-green);
     width: 500px;
     height: 250px;
     color: white;
 }
 
-img{
+.localization-image > img{
+    max-width: 500px;
+    max-height: 250px;
     width: 100%;
     height: auto;
+    
 }
 
 .localization-map {
@@ -116,7 +138,7 @@ img{
 
 /*VILLE*/ 
 .ville{
-    background-color: #DEC2C2;
+    background-color: var(--baby-blue);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,7 +151,7 @@ img{
 .image-ville{
     width: 100%;
     height: auto;
-    background-color: #604B4B;
+    background-color: #82c7ff;
     color: white;
 }
 
@@ -148,6 +170,7 @@ img{
 .footer {
     border-top: black solid 1px;
     margin: 20px;
+    background-color: #888888;
 }
 
 .footer-first {
@@ -234,6 +257,9 @@ order: 3;
     }
     .authenticity-container-image, .authenticity, .localization-image, .localization-map{
         width: 100%;
+        height: auto;
+    }
+    .localization-image > img{
         height: auto;
     }
     .image-ville{
