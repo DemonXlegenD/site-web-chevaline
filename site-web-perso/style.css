@@ -1,0 +1,249 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #BABABA;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+
+/*CLASSE*/
+
+/*HEADER*/
+.header{
+    width: 100%;
+}
+
+/*NAVBAR*/
+.navbar{
+    width: auto;
+    height: 50px;
+    background-color: rgb(100, 0, 0);
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.list-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-links-display{
+    display: flex;
+}
+
+/*Menu Burger*/
+
+.navbar-toggle{
+    height: 100%;
+    display: none;
+}
+
+.navbar-toggle > img{
+    height: 100%;
+}
+
+/*INFORMATIONS*/
+.header-information{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(255, 160, 160);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.element-information{
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+}
+
+.logo-header{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 100px;
+}
+
+/*MAIN*/
+
+main{
+    padding: 20px;
+}
+
+/*CARROUSEL*/
+
+.carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.carousel-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid pink;
+    
+}
+
+.carousel-slide {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    border: 2px solid purple;
+}
+
+.carousel-slide.active{
+    opacity: 1;
+}
+
+
+.carousel-slide img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.btn-slide{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    z-index: 2;
+}
+
+/*BOUTON CARROUSEL*/
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+/* Style personnalisé pour les cases à cocher */
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style de la coche */
+.custom-checkbox:checked::after {
+    content: "•";
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    color: rgb(32, 32, 32);
+}
+
+
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MEDIA TABLETTE*/
+
+
+@media screen and (width < 1225px){
+    /*HEADER*/
+
+    /*NAVBAR*/
+
+    .list-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        position: absolute;
+        background-color: #333;
+        top: 70px;
+        left: 0;
+        width: 0;
+        height: 130px;
+        opacity: 0;
+        overflow: hidden;
+        transition: width 1s, opacity 1s;
+    }
+
+    .list-links > li{
+        padding: 2px;
+    }
+
+    .list-links.active {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .navbar-toggle{
+        display: block;
+        cursor: pointer;
+        transition: rotate 1s;
+    }
+
+    .navbar-toggle.active{
+        rotate: 90deg;
+    }
+
+    /*MAIN*/
+
+    /*CARROUSSEL*/
+
+    .carousel-container{
+        height: 500px;
+    }
+    
+}
+
+/*MEDIA PORTABLE*/
+
+@media screen and (width < 768px){
+
+    /*MAIN*/
+
+    /*CARROUSSEL*/
+
+    .carousel-container{
+        height: 300px;
+    }
+    
+}
