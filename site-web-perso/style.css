@@ -4,16 +4,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #BABABA;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+}
 
-a{
+a {
     padding: 10px;
     text-decoration: none;
     color: currentColor;
@@ -23,12 +23,12 @@ a{
 /*CLASSE*/
 
 /*HEADER*/
-.header{
+.header {
     width: 100%;
 }
 
 /*NAVBAR*/
-.navbar{
+.navbar {
     width: auto;
     height: 50px;
     background-color: rgb(100, 0, 0);
@@ -38,30 +38,30 @@ a{
     padding: 10px;
 }
 
-.list-links{
+.list-links {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-.navbar-links-display{
+.navbar-links-display {
     display: flex;
 }
 
 /*Menu Burger*/
 
-.navbar-toggle{
+.navbar-toggle {
     height: 100%;
     display: none;
 }
 
-.navbar-toggle > img{
+.navbar-toggle>img {
     height: 100%;
 }
 
 /*INFORMATIONS*/
-.header-information{
+.header-information {
     width: 100%;
     height: 130px;
     background-color: rgb(255, 160, 160);
@@ -71,7 +71,7 @@ a{
     align-items: center;
 }
 
-.element-information{
+.element-information {
     flex-grow: 1;
     padding: 10px;
     text-align: center;
@@ -79,7 +79,7 @@ a{
     font-size: 20px;
 }
 
-.logo-header{
+.logo-header {
     border: 2px solid black;
     border-radius: 50%;
     width: 100px;
@@ -87,17 +87,18 @@ a{
 
 /*MAIN*/
 
-main{
+main {
     padding: 20px;
 }
 
 /*CARROUSEL*/
 
-.carousel{
+.carousel {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    margin: 20px;
 }
 
 .carousel-container {
@@ -106,11 +107,51 @@ main{
     position: relative;
     margin: 20px;
     width: 100%;
-    height: 600px;
+    height: 35vw;
+    min-height: 150px;
     margin: 0;
     padding: 0;
-    border: 2px solid pink;
+    color: white;
+}
+
+.carousel-text-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
+}
+
+.carousel-information {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 20px;
+}
+
+.carousel-title {
+    position: relative;
+    z-index: 3;
+    font-size: calc(16px + 0.7vw);
+    text-decoration: underline;
+}
+
+.carousel-text {
+    margin: 0;
+    font-size: calc(10px + 0.7vw);
+    position: relative;
+    z-index: 3;
+    width: 50%;
 }
 
 .carousel-slide {
@@ -122,10 +163,9 @@ main{
     z-index: 1;
     opacity: 0;
     transition: opacity 1s;
-    border: 2px solid purple;
 }
 
-.carousel-slide.active{
+.carousel-slide.active {
     opacity: 1;
 }
 
@@ -134,14 +174,13 @@ main{
     width: auto;
     min-width: 100%;
     height: 100%;
-    align-self: center;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
 
-.btn-slide{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    z-index: 2;
+.btn-slide {
+    z-index: 3;
 }
 
 /*BOUTON CARROUSEL*/
@@ -155,7 +194,7 @@ input[type="checkbox"] {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: #ffffff75;
     border: 1px solid #ccc;
     border-radius: 50%;
     cursor: pointer;
@@ -163,7 +202,7 @@ input[type="checkbox"] {
 
 /* Style de la coche */
 .custom-checkbox:checked::after {
-    content: "•";
+    background-color: #fff;
     font-size: 50px;
     display: block;
     text-align: center;
@@ -174,7 +213,7 @@ input[type="checkbox"] {
 
 /*FOOTER*/
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,12 +223,12 @@ input[type="checkbox"] {
 /*MEDIA TABLETTE*/
 
 
-@media screen and (width < 1225px){
+@media screen and (width < 1225px) {
     /*HEADER*/
 
     /*NAVBAR*/
 
-    .list-links{
+    .list-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -205,7 +244,7 @@ input[type="checkbox"] {
         transition: width 1s, opacity 1s;
     }
 
-    .list-links > li{
+    .list-links>li {
         padding: 2px;
     }
 
@@ -214,36 +253,60 @@ input[type="checkbox"] {
         opacity: 1;
     }
 
-    .navbar-toggle{
+    .navbar-toggle {
         display: block;
         cursor: pointer;
         transition: rotate 1s;
     }
 
-    .navbar-toggle.active{
+    .navbar-toggle.active {
         rotate: 90deg;
     }
 
     /*MAIN*/
 
     /*CARROUSSEL*/
-
-    .carousel-container{
-        height: 500px;
+    .carousel-information {
+        gap: 5px;
     }
-    
+
+    .carousel-text {
+        width: 80%;
+    }
+
 }
 
 /*MEDIA PORTABLE*/
 
-@media screen and (width < 768px){
+@media screen and (width < 768px) {
 
     /*MAIN*/
 
     /*CARROUSSEL*/
 
-    .carousel-container{
-        height: 300px;
+    .carousel-text-container     {
+        display: none;
     }
-    
+
+}
+
+
+
+/* Barre de défilement */
+::-webkit-scrollbar {
+    width: 15px;
+    /* Largeur de la barre de défilement */
+}
+
+/* Pouce de la barre de défilement */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgb(100, 0, 0);
+    /* Couleur du pouce */
+}
+
+/* Piste de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Couleur de la piste */
 }
