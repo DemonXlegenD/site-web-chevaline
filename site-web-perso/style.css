@@ -1,6 +1,6 @@
 :root{
     --navy-blue: #C3353B;
-    --blue-grotto: #200013;
+    --blue-grotto: #6b135f;
     --blue-green: #048CFC;
     --baby-blue: #F3F2F2;
 }
@@ -164,7 +164,7 @@ input[type="checkbox"] {
     display: grid;
     width: 100%;
     height: 500px;
-    background-color: rgb(54, 1, 1);
+    background-color: rgb(131, 41, 41);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Affichage en grille responsive */
     gap: 20px;
     padding-top: 30px;
@@ -188,7 +188,7 @@ input[type="checkbox"] {
 .localization-container {
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: var(--blue-grotto);
+    /*background-color: var(--blue-grotto);*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -196,8 +196,6 @@ input[type="checkbox"] {
     text-align: center;
     gap: 20px;
     padding-top: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .localization-block {
