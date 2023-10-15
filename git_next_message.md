@@ -1,4 +1,3 @@
-ENH: Final project
+FIX: Final project
 
 -Dernière modification du site
--FIX: fix du responsive
