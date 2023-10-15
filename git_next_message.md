@@ -1,3 +1,4 @@
-FIX: Final project
+FIX: Fix page
 
--Dernière modification du site
+- Réparation du carrousel en responsive
+- Réparation de la barre de scroll gauche droite
