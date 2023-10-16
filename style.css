@@ -1,0 +1,291 @@
+:root{
+    --navy-blue: #C3353B;
+    --blue-grotto: #05445E;
+    --blue-green: #048CFC;
+    --baby-blue: #F3F2F2;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--baby-blue);
+}
+
+/*HEADER*/
+
+.navbar {
+    background-color: black;
+    padding: 0 75px;
+    min-height: 50px;
+    margin-bottom: 150px;
+    color: white;
+}
+
+.navbar-brand, .nav-link{
+    color: white;
+}
+
+.navbar-collapse{
+    text-align: end;
+}
+
+.center-image {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 150px;
+}
+
+
+/*BODY*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*AUTHENCITY*/
+
+.authenticity-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.authenticity {
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.authenticity-container-image{
+    border-radius: 5px;
+    background-color: var(--blue-grotto);
+    display: flex;
+    align-items: center;
+    width: 750px;
+    height: 500px;
+}
+
+.card-header{
+    background-color: #C3353B;
+    color: white;
+}
+.first-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+/*Localization*/
+
+.localization-container {
+    color: white;
+    background-color: var(--blue-grotto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.localization-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.localization-image {
+    background-color: var(--blue-green);
+    width: 500px;
+    height: 250px;
+    color: white;
+}
+
+.localization-image > img{
+    max-width: 500px;
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+    
+}
+
+.localization-map {
+    width: 500px;
+    height: 250px;
+}
+
+.localization-description{
+    max-width: 750px;
+}
+
+/*VILLE*/ 
+.ville{
+    background-color: var(--baby-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-ville{
+    width: 100%;
+    height: auto;
+    background-color: #82c7ff;
+    color: white;
+}
+
+.image-ville > img{
+    border-radius: 20px;
+    width: 50%;
+    height: auto;
+}
+
+.ville-content{
+    width: 80%;
+}
+
+/*Footer*/
+
+.footer {
+    border-top: black solid 1px;
+    margin: 20px;
+    background-color: #888888;
+}
+
+.footer-first {
+    margin: 10px;
+}
+
+.center-image-footer {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.reseau-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reseau-footer-image{
+    width: 75px;
+}
+
+hr.separator {
+    width: 90%;
+    margin: 0;
+}
+
+.text-footer>p {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+    height: 400px;
+    width: 400px;
+}
+
+
+
+
+@media screen and (width <= 1000px) {  
+    .navbar{
+        justify-content: space-between;
+        margin: 0;
+        padding: 10px;
+    }
+    .navbar-brand{
+        order: 2;
+    }
+    .navbar-toggler{
+        order:3;
+    }
+    .navbar-collapse{
+order: 3;
+    }
+    .center-image{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        max-width: 100px;
+        min-width: 50px;
+        width: 100%;
+        margin: 20px;
+    }
+    .center-image-footer{
+        width: 100%;
+        min-width: 75px;
+    }
+    .authenticity-container, .localization-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .localization-container{
+        padding: 20px;
+    }
+    .localization-description{
+        order: -1;
+    }
+    .authenticity-container-image, .authenticity, .localization-image, .localization-map{
+        width: 100%;
+        height: auto;
+    }
+    .localization-image > img{
+        height: auto;
+    }
+    .image-ville{
+        padding: 5px;
+    }
+    .image-ville > img{
+        width: 100%;
+        height: auto;
+    }
+    .reseau-footer-image{
+        width: 100%;
+        min-width: 25px;
+    }
+}
+
+@media screen and (width < 572px) {
+    .navbar-brand{
+        display: none;
+    }
+    .mention{
+        font-size: 14px;
+    }
+}
+/* 
+@media screen and (width < 271px) {
+    html{
+        display: none;
+    }
+} */
