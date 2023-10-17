@@ -276,6 +276,90 @@ input[type="checkbox"] {
 
 /* Section 3 */
 
+.Présentation-container {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff75;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Présentation-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Présentation-image {
+    width: 500px;
+    height: 250px;
+}
+
+.Présentation-image>img {
+    max-width: 500px;
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.Présentation-map {
+    width: 500px;
+    height: 250px;
+}*/
+
+/*.Présentation-description {
+    max-width: 750px;
+}*/
+
+.image-container {
+    position: relative;
+    text-align: center;
+    height: 300px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.image-container img {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+/*.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
+*/
+
+.zoom{
+    display: table-cell;
+    height: 500px;
+    width: 1025px;
+    text-align: center;
+    vertical-align: middle;
+    background-size: 100%;
+    border: 3px solid black;
+}
+
+/* Section 4 */
 .localization-container {
     width: 100%;
     color: rgb(255, 255, 255);
