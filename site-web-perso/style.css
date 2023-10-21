@@ -276,6 +276,74 @@ input[type="checkbox"] {
 
 /* Section 3 */
 
+.Présentation-container {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff75;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Présentation-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Présentation-image {
+    width: 500px;
+    height: 250px;
+}
+
+.Présentation-image>img {
+    max-width: 500px;
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+    /*gap: 20px;*/
+    /*margin-left: 50px;*/
+}
+
+.image-container {
+    display: block;
+    position: relative;
+    top: auto;
+    left: 500px;
+    z-index: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+.image-title {
+    font-size: calc(16px + 0.7vw);
+    width: 100%;
+    z-index: 3;
+    text-decoration: underline;
+}
+.image-text {
+    background-color: rgba(102, 102, 102, 0.5);
+    font-size: calc(10px + 0.7vw);
+    color: #fff;
+    width: 50%;
+    z-index: 3;
+    margin: 0;
+}
+
+/* Section 4 */
 .localization-container {
     width: 100%;
     color: rgb(255, 255, 255);
