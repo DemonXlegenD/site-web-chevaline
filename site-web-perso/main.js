@@ -55,3 +55,39 @@ function showSlide(index) {
 
 checkboxes[currendIndex].checked = true;
 showSlide(currendIndex);
+
+
+/*SMOOTH NAVBAR*/
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+          window.scrollTo({
+              top: targetSection.offsetTop,
+              behavior: 'smooth'
+          });
+      }
+  });
+});
+
+const scrollButton = document.getElementById('scrollUp');
+
+/*SCROLL UP BUTTON*/
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    scrollButton.style.display = 'block';
+  } else {
+    scrollButton.style.display = 'none';
+  }
+});
+
+scrollButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+});
+})

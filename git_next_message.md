@@ -1,5 +1,3 @@
-ENH: Amélioration de la page
+ENH: Amélioration du footer
 
-- Ajout d'espaces et d'aérations
-- Responsive amélioré
-- Footer à revoir
+- Amélioration du footer en ajoutant les informations en bas de la page
